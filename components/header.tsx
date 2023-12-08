@@ -23,8 +23,8 @@ export const Header = () => {
         <ul>
           {links.map((link)=>
           (
-          <li>
-            <Link href=""></Link>
+          <li key={link.hash}>
+            <Link href={link.hash}>{link.name}</Link>
           </li>
           )
           )}
