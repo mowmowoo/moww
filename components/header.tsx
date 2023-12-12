@@ -19,12 +19,17 @@ export const Header = () => {
 
       </motion.div>
 
-      <nav className="">
-        <ul>
+      <nav className="h-12 fixed top-[0.15rem] left-1/2 -translate-x-1/2 py-2 
+                      sm:top-[1.7rem] sm:h-[initial] sm:py-0
+                      ">
+        <ul className="w-[22rem] flex flex-wrap items-center justify-center gap-y-1 
+                      text-[0.9rem] font-medium text-gray-500
+                      sm:gap-5 sm:flex-nowrap sm:w-[initial]
+                      ">
           {links.map((link)=>
           (
-          <li key={link.hash}>
-            <Link href={link.hash}>{link.name}</Link>
+          <li className="h-3/4 flex items-center justify-center" key={link.hash}>
+            <Link className="w-full flex items-center justify-center py-3 px-3" href={link.hash}>{link.name}</Link>
           </li>
           )
           )}
