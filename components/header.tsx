@@ -11,12 +11,14 @@ export const Header = () => {
       <div
         className="bg-white bg-opacity-80 w-full h-[4.5rem] fixed top-0
         shadow-lg shadow-black/[0.03] backdrop-blur-[1.5rem]
-        sm:w-[36rem] sm:h-[3.25rem] sm:rounded-full sm:top-6 
+        border border-white border-opacity-40 rounded-none
+        sm:w-[36rem] sm:h-[3.25rem] sm:rounded-full sm:top-6 left-1/2 -translate-x-1/2
+        
         "
       ></div>
       <nav
-        className="h-12 flex fixed top-[0.15rem] py-2 left-1/2 -translate-x-1/2
-                    sm:top-[1.7rem] sm:py-0 sm:h-[initial]
+        className="h-12 flex fixed top-[0.15rem] left-1/2 -translate-x-1/2
+                  sm:top-[1.7rem] sm:h-[initial] sm:py-0
                     "
       >
         <ul>
