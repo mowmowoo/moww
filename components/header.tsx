@@ -21,7 +21,7 @@ export const Header = () => {
                   sm:top-[1.7rem] sm:h-[initial] sm:py-0
                     "
       >
-        <ul>
+        <ul className="w-[22rem] flex flex-wrap items-center justify-center">
           {links.map((link) => (
             <li>
               <Link href={link.hash}>{link.name}</Link>
