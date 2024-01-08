@@ -21,13 +21,13 @@ export const Header = () => {
                   sm:top-[1.7rem] sm:h-[initial] sm:py-0
                     "
       >
-        <ul className="w-[22rem] flex flex-wrap items-center justify-center gap-y-1
-                      text-gray-500 font-medium text-[0.9rem]
+        <ul className="text-gray-500 font-medium text-[0.9rem] 
+                      w-[22rem] flex flex-wrap items-center justify-center gap-y-1
                       sm:gap-5 sm:w-[initial] sm:flex-nowrap
         ">
           {links.map((link) => (
-            <li>
-              <Link href={link.hash}>{link.name}</Link>
+            <li className="h-3/4 flex items-center justify-center">
+              <Link className="w-full flex items-center justify-center px-3 py-3 hover:text-gray-950" href={link.hash}>{link.name}</Link>
             </li>
           ))}
         </ul>
