@@ -8,24 +8,39 @@ import Link from "next/link";
 export const Header = () => {
   return (
     <header className="z-999 relative">
-      <div
+      <motion.div
         className="bg-white bg-opacity-80 w-full h-[4.5rem] fixed top-0
         shadow-lg shadow-black/[0.03] backdrop-blur-[1.5rem]
         border border-white border-opacity-40 rounded-none
         sm:w-[36rem] sm:h-[3.25rem] sm:rounded-full sm:top-6 left-1/2 -translate-x-1/2
-        
         "
-      ></div>
+        initial={{ y: -100, x: "-50", opacity: 0 }}
+        animate={{ y: 0, x: "50", opacity: 1 }}
+      ></motion.div>
       <nav
         className="h-12 flex fixed top-[0.15rem] left-1/2 -translate-x-1/2
                   sm:top-[1.7rem] sm:h-[initial] sm:py-0
                     "
       >
-        <ul className="w-[22rem] flex flex-wrap items-center justify-center">
+        <ul
+          className="text-gray-500 font-medium text-[0.9rem] 
+                      w-[22rem] flex flex-wrap items-center justify-center gap-y-1
+                      sm:gap-5 sm:w-[initial] sm:flex-nowrap
+        "
+        >
           {links.map((link) => (
-            <li>
-              <Link href={link.hash}>{link.name}</Link>
-            </li>
+            <motion.li
+              className="h-3/4 flex items-center justify-center"
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+            >
+              <Link
+                className="w-full flex items-center justify-center px-3 py-3 hover:text-gray-950 transition"
+                href={link.hash}
+              >
+                {link.name}
+              </Link>
+            </motion.li>
           ))}
         </ul>
       </nav>
