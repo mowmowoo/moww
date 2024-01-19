@@ -12,7 +12,7 @@ export const Intro = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ type:"tween", duration: 0.2}}
+            transition={{ type: "tween", duration: 0.2 }}
           >
             <Image
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
@@ -38,6 +38,14 @@ export const Intro = () => {
           </span>
         </div>
       </div>
+
+      <p>
+        <span className="font-bold">Hello, I'm Ricardo.</span> I'm a{" "}
+        <span className="font-bold">full-stack developer</span> with{" "}
+        <span className="font-bold">8 years</span> of experience. I enjoy
+        building <span className="italic">sites & apps</span>. My focus is{" "}
+        <span className="underline">React (Next.js)</span>.
+      </p>
     </section>
   );
 };

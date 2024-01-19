@@ -33,6 +33,7 @@ export const Header = () => {
               className="h-3/4 flex items-center justify-center"
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
+              key={link.hash}
             >
               <Link
                 className="w-full flex items-center justify-center px-3 py-3 hover:text-gray-950 transition"
