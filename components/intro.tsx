@@ -4,7 +4,9 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { HiDownload } from "react-icons/hi";
+import { FaGithubSquare } from "react-icons/fa";
 
 export const Intro = () => {
   return (
@@ -55,19 +57,38 @@ export const Intro = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Ricardo.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">8 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
+        <span className="font-bold">Hello, I'm cccccc.</span> I'm a{" "}
+        <span className="font-bold">ccccc</span> with{" "}
+        <span className="font-bold">8 years</span> ccccccy building{" "}
+        <span className="italic">ccccs</span>. My focus is{" "}
+        <span className="underline">cccc (cccc)</span>.
       </motion.p>
 
-      <div>
-        <Link href="#contact" className="bg-gray-900 text-white flex items-center px-7 py-3">
+      <motion.div
+        className="text-lg font-medium flex flex-col sm:flex-row items-center justify-center px-4 gap-2 "
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+      >
+        <Link
+          href="#contact"
+          className="bg-gray-900 text-white rounded-full flex items-center px-7 py-3 gap-2 
+                        focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition
+                        outline-none "
+        >
           contact me here
-          <BsArrowRight />{" "}
+          <BsArrowRight />
         </Link>
-      </div>
+        <a className="bg-white flex items-center px-7 py-3 gap-2 rounded-full">
+          Download CV <HiDownload />
+        </a>
+        <a className="bg-white text-gray-700 rounded-full flex items-center p-4 gap-2">
+          <BsLinkedin />
+        </a>
+        <a className="bg-white text-gray-700 text-[1.35rem] rounded-full flex items-center p-4 gap-2">
+          <FaGithubSquare />
+        </a>
+      </motion.div>
     </section>
   );
 };
