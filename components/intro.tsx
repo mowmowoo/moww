@@ -74,18 +74,34 @@ export const Intro = () => {
           href="#contact"
           className="bg-gray-900 text-white rounded-full flex items-center px-7 py-3 gap-2 
                         focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition
-                        outline-none "
+                        outline-none group"
         >
           contact me here
-          <BsArrowRight />
+          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
-        <a className="bg-white flex items-center px-7 py-3 gap-2 rounded-full">
-          Download CV <HiDownload />
+
+        <a
+          className="bg-white flex items-center px-7 py-3 gap-2 rounded-full
+                        outline-none cursor-pointer border border-black/10
+                        group focus:scale-110 hover:scale-110 active:scale-105 transition
+                    "
+          href="/CV.pdf"
+          download
+        >
+          Download CV{" "}
+          <HiDownload className="opacity-60 group-hover:translate-y-1 transition " />
         </a>
-        <a className="bg-white text-gray-700 rounded-full flex items-center p-4 gap-2">
+        <a className="bg-white text-gray-700 rounded-full flex items-center p-4 gap-2
+                      cursor-pointer border border-black/10
+                       focus:scale-110 hover:scale-110 active:scale-105 transition
+          ">
           <BsLinkedin />
         </a>
-        <a className="bg-white text-gray-700 text-[1.35rem] rounded-full flex items-center p-4 gap-2">
+        <a className="bg-white text-gray-700 text-[1.35rem] rounded-full flex items-center p-4 gap-2
+                      cursor-pointer border border-black/10
+                      group focus:scale-110 hover:scale-110 active:scale-105 transition
+        
+        ">
           <FaGithubSquare />
         </a>
       </motion.div>
