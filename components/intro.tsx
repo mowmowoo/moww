@@ -52,7 +52,7 @@ export const Intro = () => {
         </div>
       </div>
 
-      <motion.p
+      <motion.h1
         className="mb-1 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ export const Intro = () => {
         <span className="font-bold">8 years</span> ccccccy building{" "}
         <span className="italic">ccccs</span>. My focus is{" "}
         <span className="underline">cccc (cccc)</span>.
-      </motion.p>
+      </motion.h1>
 
       <motion.div
         className="text-lg font-medium flex flex-col sm:flex-row items-center justify-center px-4 gap-2 "
@@ -83,7 +83,7 @@ export const Intro = () => {
         <a
           className="bg-white flex items-center px-7 py-3 gap-2 rounded-full
                         outline-none cursor-pointer border border-black/10
-                        group focus:scale-110 hover:scale-110 active:scale-105 transition
+                        group focus:scale-110 hover:scale-110 active:scale-55 transition
                     "
           href="/CV.pdf"
           download
@@ -91,17 +91,28 @@ export const Intro = () => {
           Download CV{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition " />
         </a>
-        <a className="bg-white text-gray-700 rounded-full flex items-center p-4 gap-2
+        <a
+          className="bg-white text-gray-700 rounded-full flex items-center p-4 gap-2
                       cursor-pointer border border-black/10
-                       focus:scale-110 hover:scale-110 active:scale-105 transition
-          ">
+                      focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition hover:text-gray-950
+                      
+          "
+          href="https://linkedin.com"
+          target="_blank"
+        >
           <BsLinkedin />
         </a>
-        <a className="bg-white text-gray-700 text-[1.35rem] rounded-full flex items-center p-4 gap-2
+        <a
+          className="bg-white text-gray-700 text-[1.35rem] rounded-full flex items-center p-4 gap-2
                       cursor-pointer border border-black/10
-                      group focus:scale-110 hover:scale-110 active:scale-105 transition
+                     focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition hover:text-gray-950
+                     
         
-        ">
+
+        "
+          href="https://linkedin.com"
+          target="_blank"
+        >
           <FaGithubSquare />
         </a>
       </motion.div>
