@@ -3,7 +3,7 @@ import React from 'react'
 export default function About() {
   return (
     <section>
-      <h2>About me</h2>
+      <h2 className="text-3xl font-medium">About me</h2>
       <p>
         After graduating with a degree in{" "}
         <span className="font-medium">Accounting</span>, I decided to pursue my
