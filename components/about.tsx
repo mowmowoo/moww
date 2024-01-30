@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function About() {
   return (
-    <section>
-      <h2 className="text-3xl font-medium">About me</h2>
-      <p>
+    <section className="mb-28 max-w-[45rem] text-center ">
+      <h2 className="text-3xl font-medium capitalize mb-8">About me</h2>
+      <p className="mb-3">
         After graduating with a degree in{" "}
         <span className="font-medium">Accounting</span>, I decided to pursue my
         passion for programming. I enrolled in a coding bootcamp and learned{" "}
