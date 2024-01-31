@@ -1,9 +1,10 @@
 import React from 'react'
+import SectionHeading from './section-heading';
 
 export default function About() {
   return (
-    <section className="mb-28 max-w-[45rem] text-center ">
-      <h2 className="text-3xl font-medium capitalize mb-8">About me</h2>
+    <section className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 ">
+      <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
         After graduating with a degree in{" "}
         <span className="font-medium">Accounting</span>, I decided to pursue my
