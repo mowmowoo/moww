@@ -19,9 +19,8 @@ export default function Project({
     offset: ["0 1", "1.33 1"],
   });
 
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1])
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1])
-
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
     <motion.div
@@ -29,14 +28,13 @@ export default function Project({
       ref={ref}
       style={{
         scale: scaleProgress,
-        opacity: opacityProgress
-        ,
+        opacity: opacityProgress,
       }}
     >
       <section
         className="bg-gray-100 max-w-[42rem]
         border border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem]
-        even:pl-8 hover:bg-gray-200 transition 
+        group-even:pl-8 hover:bg-gray-200 transition rounded-lg
         "
       >
         <div
