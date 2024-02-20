@@ -4,11 +4,10 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
-import clsx from "clsx"
+import clsx from "clsx";
 
 export const Header = () => {
-  const [activeSection, setActiveSection ] =
-  useState('Home')
+  const [activeSection, setActiveSection] = useState("Home");
 
   return (
     <header className="z-999 relative">
@@ -40,7 +39,8 @@ export const Header = () => {
               key={link.hash}
             >
               <Link
-                className="w-full flex items-center justify-center px-3 py-3 hover:text-gray-950 transition"
+                className={clsx("w-full flex items-center justify-center px-3 py-3 hover:text-gray-950 transition", 
+                {"text-gray-950": activeSection === link.name,})}
                 href={link.hash}
               >
                 {link.name}
