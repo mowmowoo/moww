@@ -6,7 +6,7 @@ import { links } from "@/lib/data";
 type SectionName = typeof links[number]["name"]; //get link name from data
 
 type ActiveSectionContextProviderProps = {
-  //seperate from ActiveSectionContextProvider
+  //seperate from ActiveSectionContextProvider to make code look nice 
   children: React.ReactNode;
 };
 
