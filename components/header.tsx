@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
-import { useActiveSectionContext } from "@/context/active-section-context"
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export const Header = () => {
   const { activeSection, setActiveSection } = useActiveSectionContext();
   return (
-    <header className="z-999 relative">
+    <header className="z-[999] relative">
       <motion.div
         className="bg-white bg-opacity-80 w-full h-[4.5rem] fixed top-0
         shadow-lg shadow-black/[0.03] backdrop-blur-[1.5rem]
