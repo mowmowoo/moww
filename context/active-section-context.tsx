@@ -6,7 +6,7 @@ import { links } from "@/lib/data";
 type SectionName = typeof links[number]["name"]; //get link name from data
 
 type ActiveSectionContextProviderProps = {
-  //seperate from ActiveSectionContextProvider to make code look nice 
+  //seperate from ActiveSectionContextProvider to make code look nice
   children: React.ReactNode;
 };
 
@@ -14,6 +14,8 @@ type ActiveSectionContextType = {
   //useState
   activeSection: SectionName;
   setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
+  timeOfLastClick: number;
+  setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
 };
 
 export const ActiveSectionContext =
@@ -23,9 +25,10 @@ export default function ActiveSectionContextProvider({
   children,
 }: ActiveSectionContextProviderProps) {
   const [activeSection, setActiveSection] = useState<SectionName>("Home");
+  const [timeOfLastClick, setTimeOfLastClick] = useState(0);
 
   return (
-    <ActiveSectionContext.Provider value={{ activeSection, setActiveSection }}>
+    <ActiveSectionContext.Provider value={{ activeSection, setActiveSection, timeOfLastClick, setTimeOfLastClick }}>
       {children}
     </ActiveSectionContext.Provider>
   );
